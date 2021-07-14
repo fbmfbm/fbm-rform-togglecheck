@@ -1,8 +1,8 @@
 {
   "name": "fbm-rform-togglecheck",
   "version": "0.2.1",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/ToggleCheck.js",
+  "module": "dist/ToggleCheck.js",
   "files": [
     "dist",
     "README.md"
