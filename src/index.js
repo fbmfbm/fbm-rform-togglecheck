@@ -6,7 +6,7 @@ import ToggleCheck from './lib/ToggleCheck';
 ReactDOM.render(
   <React.StrictMode>
     <div>Test fbm react form ToggleCheck input</div>
-    <ToggleCheck />
+    <ToggleCheck label="Test ToggleCheckBox"/>
   </React.StrictMode>,
   document.getElementById('root')
 );
