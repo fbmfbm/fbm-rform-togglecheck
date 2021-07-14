@@ -1,0 +1,65 @@
+.fbm-rform-form-check {
+    --border: #D1D5DB;
+    --cursor: #89909E;
+    --checked: #1771E6;
+    --checked-cursor: #fff;
+    position:relative;
+
+}
+
+.fbm-rform-form-check input {
+    position:absolute;
+    opacity: 0;
+    z-index: 2;
+}
+
+.fbm-rform-form-check label{
+    display: grid;
+    grid-template-columns: 2em 1fr;
+    grid-template-areas: "checkbox label";
+    gap: .7em;
+}
+
+.fbm-rform-form-check label::before,
+.fbm-rform-form-check label::after {
+    grid-area: checkbox;
+    content: '';
+    display: block;
+   
+}
+
+.fbm-rform-form-check label::before {
+    width: 100% ;
+    height: 1em;
+    border-radius: 1em;
+    border: solid 1px var(--border);
+    transition: background-color .3s, border-color .3s;
+    
+}
+
+.fbm-rform-form-check label::after {
+    position: relative;
+    left: 2px;
+    top: 2px;
+    width: calc(1em - 2px);
+    height: calc(1em - 2px);
+    border-radius: 50%;
+    background-color: var(--cursor);
+    transition: background-color .3s, border-color .3s;
+}
+
+.fbm-rform-form-check input:checked + label::before {
+    background-color: var(--checked);
+    border-color: var(--checked);
+}
+
+.fbm-rform-form-check input:checked + label::after {
+    background-color: var(--checked-cursor);
+    transform: translateX(1em);
+}
+
+.fbm-rform-form-check input:focus + label::before {
+    box-shadow: 0 0 0 0.25em rgb(185, 224, 255);
+    border-color: var(--checked);
+}
+
